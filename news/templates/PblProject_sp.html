@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+     <style>
+       img{
+    height:inherit;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    background-position: center;
+    background-size:cover;
+    position: absolute;
+    z-index:-1;
+    opacity: 67%;
+  }
+
+
+     
+       p{font-size: 30px;
+          padding-top: 8%;
+       }
+       .jumbotron{
+         background-color:transparent;
+         color: rgb(145, 5, 82);
+         text-shadow: yellow;
+         width: 100%;
+         height: 30%;
+        margin-top: -300px;
+       }
+       .Get{
+         font-size: 20px;
+         color:black;
+         margin-left: 10px;
+         font-weight: 690;
+       }
+       .card{
+         margin-left: 300;
+       }
+       a:hover{
+         color: red;
+       }
+       .card-img-top{
+         width: 120px;
+       }
+       .btn btn-success{
+         margin-top: 20px;
+       }
+       .btn:hover{
+           color:darkblue;
+       }
+
+       
+     </style>
+  </head>
+<body>
+  <img src="{% static 'images/Image.jpeg' %}">
+  <div class="page">
+    <p style="color:black; font-size: 20px; background-color:transparent;width: 800px;margin-top: 0px; padding: 30px;margin-left: -10px;font-weight: 900;">Date:<span id="datetime"></span></p>
+    <script>
+      var dt=new Date();
+      document.getElementById("datetime").innerHTML=dt.toLocaleString();
+    </script>
+  <p class="Get">Copyright &copy; </p>
+  <p style="color:white" ></p>
+    <div class="jumbotron">
+        <center><h1 style="color:rgb(2, 4, 27);background-color:transparent; margin-top: -90px;font-family:Georgia, 'Times New Roman', Times, serif;font-weight: bolder;font-variant: small-caps;font-size: 40px;"><i>TeamBitsAndBytes_NewsAggregator</i></h1><br>
+          <a href="/" class="btn btn-success" > <h4> &#x2190 Get back to home page </h4> </a>
+        </form>
+        
+    </center>
+    </div>
+<div class="row">
+    <div class="col-6" style="background-color:transparent;">
+            <h3 class="text-centre" style="border: 4px black solid;background-color: white;font-weight: bold;text-align: center;"> News from Times of India</h3>
+            <!-- {% for np in toi_newsp %} -->
+           
+
+            <h5 style="border: 4px solid black; background-color: white;"> -  {{np}} </h5>
+            <hr>
+            <!-- {% endfor %} -->
+
+            <br>
+    </div>
+    <div class="col-6" style="background-color:transparent;">
+            <h3 class="text-centre" style="border: 4px black solid;font-weight: bold;text-align: center;background-color: white;">News from Outlook India</h3>
+            <!-- {% for htnp in ot_newsp %} -->
+            
+            <h5 style="border: 4px solid black; background-color: white;"> - {{htnp}} </h5>
+            <hr>
+            <!-- {% endfor %} -->
+            <br>
+    </div>
+
+</div>
+    <script
+src="http://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</div>
+</body>
+</html>
